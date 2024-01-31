@@ -25,7 +25,7 @@ async function onFormSubmit(e) {
   if (result.totalHits === 0) {
     iziToast.error({
       message:
-        'Sorry, there are no images matching your search query. Please try again!',
+        'Sorry, there are no images matching your search query. Please try again!!',
     });
     return;
   }
