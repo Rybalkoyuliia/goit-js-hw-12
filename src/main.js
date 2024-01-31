@@ -20,7 +20,6 @@
 // });
 
 // function fetchImg(searchWord) {
-//   PARAMS.set('key', 'q');
 //   PARAMS.set('q', searchWord);
 //   const url = `${BASE_URL}${END_POINT}?${PARAMS}`;
 
@@ -33,14 +32,14 @@
 //       }
 //     })
 //     .then(data => {
-//       const images = data.hits;
+//       let images = data.hits;
 //       if (images.length > 0) {
 //         return images;
 //       } else {
-//         iziToast.error({
-//           message:
-//             'Sorry, there are no images matching your search query. Please try again!',
-//         });
+// iziToast.error({
+//   message:
+//     'Sorry, there are no images matching your search query. Please try again!',
+// });
 //       }
 //     })
 //     .catch(error => {
@@ -79,18 +78,44 @@
 //     });
 // }
 
-// function imgTemplate(image) {
-//   return `<li class="gallery__item">
-//    <a class="gallery__link" href="${image.largeImageURL}">
-//     <img class="gallery__image" src=${image.webformatURL} alt=${image.tags}/>
-//     <ul class="description-list">
-//             <li class="description-item">Lickes: ${image.likes}</li>
-//             <li class="description-item">Views: ${image.views}</li>
-//             <li class="description-item">Comments: ${image.comments}</li>
-//             <li class="description-item">Downloads: ${image.downloads}</li>
-//     </ul>
-//     </a>
-//   </li>`;
+// function imgTemplate({
+//   largeImageURL,
+//   webformatURL,
+//   tags,
+//   likes,
+//   views,
+//   comments,
+// }) {
+//   return `<li class="gallery-item">
+//       <a href='${largeImageURL}' class="galery-link">
+//   <img class="gallery-image" src="${webformatURL}" alt="${tags}" loading="lazy" />
+
+//   <div class = info-container>
+
+//     <div class="info-item">
+//       <span class="info-name">Likes</span>
+//       <span class ="info-value">${likes}</span>
+//     </div>
+
+//     <div class="info-item">
+//       <span class="info-name">Views</span>
+//       <span class ="info-value">${views}</span>
+//     </div>
+
+//     <div class="info-item">
+//       <span class="info-name">Comments</span>
+//       <span class ="info-value">${comments}</span>
+//     </div>
+
+//     <div class="info-item">
+//       <span class="info-name">Downloads</span>
+//       <span class ="info-value">${downloads}</span>
+//     </div>
+//     </div>
+
+//   </a>
+// </li>
+// `;
 // }
 
 // function imagesTemplate(images) {

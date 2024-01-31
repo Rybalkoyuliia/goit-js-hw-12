@@ -13,7 +13,7 @@ export class ImageAPI {
 
   fetchImages() {
     const url = ImageAPI.BASE_URL + ImageAPI.END_POINT;
-    const params = new URLSearchParams({
+    const params = {
       key: '42078504-06c0bc861c70afe486d8727f6',
       q: this.query,
       image_type: 'photo',
@@ -21,7 +21,7 @@ export class ImageAPI {
       safesearch: 'true',
       page: this.page,
       per_page: this.pageSize,
-    });
+    };
 
     return axios.get(url, { params }).then(response => response.data);
   }
