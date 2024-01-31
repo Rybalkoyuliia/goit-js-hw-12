@@ -50,6 +50,10 @@ button:hover {
   background-color: rgba(108, 140, 255, 1);
 }
 
+.load {
+  margin: 50px auto;
+}
+
 .form {
   display: flex;
   justify-content: center;
